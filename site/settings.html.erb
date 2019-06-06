@@ -1,0 +1,25 @@
+<div class="settings">
+    <h1>Settings</h1>
+    <div class="divider"></div>
+    <section>
+        <h3>School</h3>
+        <select id="school_box" onChange="changeSchool(this);" class="select-css">
+            <option value="0">-</option>
+        </select>
+    </section>
+    <section>
+        <h3 id="student_class">Student</h3>
+        <select id="student_box" onChange="changeStudent(this);" class="select-css">
+            <option value="0">-</option>
+        </select>
+    </section>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        options()
+        if (getCookieValue("schoolSlug") != null) {
+            optionsStudent()
+        }
+    });
+</script>

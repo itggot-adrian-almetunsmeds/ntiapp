@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NTIAPP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+    </nav>
+    <div class="wrapper">
+        <header class="flex-center">
+                <div class="burger" onclick="sideMenu()">
+                    <span></span>
+                </div>
+            <h1>NTI</h1>
+        </header>
+        <main>
+                <%= yield %>
+        </main>
+
+        <footer class="flex-center">
+            <p> Copyright Adr29truck 2019 </p>
+        </footer>
+    </div>
+</body>
+    <script src="/js/main.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+</html>

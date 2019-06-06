@@ -1,0 +1,41 @@
+.contain
+    min-height: 79vh
+    height: 100%
+    width: 100%
+    display: grid
+    grid-template-columns: auto
+#container
+    width: 100vw
+    min-height: 80vh
+    display: grid
+    grid-template-columns: 100% 100% 100% 100% 100% 
+    grid-template-areas: "mon tue wed thu fri"
+    overflow-x: scroll
+    scroll-snap-type: x mandatory
+    .times
+        display: grid
+        grid-template-rows: auto auto
+    .times span:first-of-type
+        font-weight: bold
+    .times span:last-of-type
+        color: rgba(0,0,0,0.6)
+    .lessons
+        display: grid
+        grid-template-rows: auto auto
+        span
+            padding-left: 20px
+    .lessons span:last-of-type
+        font-size: 10px
+    .lesson_group
+        display: grid
+        grid-template-columns: 15% 4px auto
+        padding: 2px 8px 2px 8px
+        border-top: silver 1px solid
+    .container_content
+        scroll-snap-align: start
+    .container_content .lesson_group:first-of-type
+        border-style: hidden
+    .flex-center
+        h2
+            margin: 0
+        padding-bottom: 5px

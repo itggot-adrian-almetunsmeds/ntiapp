@@ -1,0 +1,14 @@
+<div class="transit"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        getTrafficId();
+        let name_Value = getCookieValue("schoolname");
+        if (name_Value == "" || name_Value == "-") {
+            document.querySelector(".transit").innerHTML = `<h2 class="not_configured">Not configured</h2> <h4 class="not_configured">Please use the settings menu to configure the application</h4>`;
+        };
+        setInterval(() => {
+            getTrafficId()
+        }, 30000);
+    });
+</script>
