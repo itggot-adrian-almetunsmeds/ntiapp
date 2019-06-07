@@ -5,6 +5,8 @@
 
 
 <head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
 
     <meta charset="UTF-8">
 
@@ -14,9 +16,7 @@
 
     <title>NTIAPP</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css" type="text/css">
 
@@ -36,11 +36,11 @@
 
         <header class="flex-center">
 
-                <div class="burger" onclick="sideMenu()">
+            <div class="burger" onclick="sideMenu()">
 
-                    <span></span>
+                <span></span>
 
-                </div>
+            </div>
 
             <h1>NTI</h1>
 
@@ -48,33 +48,32 @@
 
         <main>
 
-                <div class="transit"></div>
+            <div class="transit"></div>
 
 
 
-<script>
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
 
-    window.addEventListener('DOMContentLoaded', (event) => {
+                    getTrafficId();
 
-        getTrafficId();
+                    let name_Value = getCookieValue("schoolname");
 
-        let name_Value = getCookieValue("schoolname");
+                    if (name_Value == "" || name_Value == "-") {
 
-        if (name_Value == "" || name_Value == "-") {
+                        document.querySelector(".transit").innerHTML =
+                            `<h2 class="not_configured">Not configured</h2> <h4 class="not_configured">Please use the settings menu to configure the application</h4>`;
 
-            document.querySelector(".transit").innerHTML = `<h2 class="not_configured">Not configured</h2> <h4 class="not_configured">Please use the settings menu to configure the application</h4>`;
+                    };
 
-        };
+                    setInterval(() => {
 
-        setInterval(() => {
+                        getTrafficId()
 
-            getTrafficId()
+                    }, 30000);
 
-        }, 30000);
-
-    });
-
-</script>
+                });
+            </script>
         </main>
 
 
@@ -89,8 +88,8 @@
 
 </body>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
-    <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 
 </html>

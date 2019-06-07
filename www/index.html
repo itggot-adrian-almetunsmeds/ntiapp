@@ -5,6 +5,9 @@
 
 
 <head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+
 
     <meta charset="UTF-8">
 
@@ -14,9 +17,7 @@
 
     <title>NTIAPP</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css" type="text/css">
 
@@ -36,11 +37,11 @@
 
         <header class="flex-center">
 
-                <div class="burger" onclick="sideMenu()">
+            <div class="burger" onclick="sideMenu()">
 
-                    <span></span>
+                <span></span>
 
-                </div>
+            </div>
 
             <h1>NTI</h1>
 
@@ -48,23 +49,21 @@
 
         <main>
 
-                <div class="contain">
+            <div class="contain">
 
-    <div id="container">
+                <div id="container">
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
-<script>
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
 
-    window.addEventListener('DOMContentLoaded', (event) => {
+                    schedule()
 
-        schedule()
-
-    });
-
-</script>
+                });
+            </script>
         </main>
 
 
@@ -79,8 +78,8 @@
 
 </body>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 
-    <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 
 </html>
