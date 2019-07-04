@@ -1,117 +1,61 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-
-
-<head>
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
-
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>NTIAPP</title>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="main.css" type="text/css">
-
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
-
-</head>
-
-
-
-<body>
-
-    <nav>
-
-    </nav>
-
-    <div class="wrapper">
-
-        <header class="flex-center">
-
-            <div class="burger" onclick="sideMenu()">
-
-                <span></span>
-
-            </div>
-
-            <h1>NTI</h1>
-
-        </header>
-
-        <main>
-
-            <div class="settings">
-
-                <h1>Settings</h1>
-
-                <div class="divider"></div>
-
-                <section>
-
-                    <h3>School</h3>
-
-                    <select id="school_box" onChange="changeSchool(this);" class="select-css">
-
-                        <option value="0">-</option>
-
-                    </select>
-
-                </section>
-
-                <section>
-
-                    <h3 id="student_class">Student</h3>
-
-                    <select id="student_box" onChange="changeStudent(this);" class="select-css">
-
-                        <option value="0">-</option>
-
-                    </select>
-
-                </section>
-
-            </div>
-
-
-
-            <script>
-                window.addEventListener('DOMContentLoaded', (event) => {
-
-                    options()
-
-                    if (getCookieValue("schoolSlug") != null) {
-
-                        optionsStudent()
-
-                    }
-
-                });
-            </script>
-        </main>
-
-
-
-        <footer class="flex-center">
-
-            <p> Copyright Adr29truck 2019 </p>
-
-        </footer>
-
-    </div>
-
-</body>
-
-<script src="main.js"></script>
-
-<script type="text/javascript" src="cordova.js"></script>
-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src *; img-src * filesystem: data:">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NTIAPP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+    </nav>
+    <div class="wrapper">
+        <header class="flex-center">
+                <div class="burger" onclick="sideMenu()">
+                    <span></span>
+                </div>
+            <h1>NTI</h1>
+        </header>
+        <main>
+                <div class="settings">
+    <h1>Settings</h1>
+    <div class="divider"></div>
+    <section>
+        <h3>School</h3>
+        <select id="school_box" onChange="changeSchool(this);" class="select-css">
+            <option value="0">-</option>
+        </select>
+    </section>
+    <section>
+        <h3 id="student_class">Student</h3>
+        <select id="student_box" onChange="changeStudent(this);" class="select-css">
+            <option value="0">-</option>
+        </select>
+    </section>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        options()
+        if (getCookieValue("schoolSlug") != null) {
+            optionsStudent()
+        }
+    });
+</script>
+        </main>
+
+        <footer class="flex-center">
+            <p> Copyright Adr29truck 2019 </p>
+        </footer>
+    </div>
+</body>
+    <script src="/js/main.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
 </html>
