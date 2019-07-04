@@ -39,7 +39,7 @@ function __init__() {
     name.innerHTML = name_Value
     let list = document.createElement('ul')
     let scheduleA = document.createElement('a')
-    scheduleA.href = '/'
+    scheduleA.href = 'index.html'
     let schedule = document.createElement('li')
     schedule.innerHTML = 'Schedule'
     scheduleA.append(schedule)
